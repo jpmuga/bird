@@ -43,6 +43,12 @@
 #undef CONFIG_OSPF
 #undef CONFIG_PIPE
 
+/* Full client compiled in */
+#undef CONFIG_CLIENT_FULL
+
+/* Light client compiled in */
+#undef CONFIG_CLIENT_LIGHT
+
 /* We have <syslog.h> and syslog() */
 #undef HAVE_SYSLOG
 

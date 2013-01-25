@@ -241,9 +241,11 @@ cmd_complete(char *cmd, int len, char *buf, int again)
 	{
 	  if (!again)
 	    return -1;
+#ifdef CONFIG_CLIENT_FULL
 	  input_start_list();
 	  cmd_list_ambiguous(n, z, cmd-z);
 	  input_stop_list();
+#endif
 	  return 0;
 	}
       if (!m)
@@ -272,9 +274,11 @@ cmd_complete(char *cmd, int len, char *buf, int again)
     }
   if (!again)
     return -1;
+#ifdef CONFIG_CLIENT_FULL
   input_start_list();
   cmd_list_ambiguous(n, fin, end-fin);
   input_stop_list();
+#endif
   return 0;
 }
 

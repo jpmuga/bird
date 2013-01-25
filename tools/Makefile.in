@@ -9,6 +9,8 @@ all: sysdep/paths.h .dep-stamp subdir daemon @CLIENT@
 
 daemon: $(exedir)/bird
 
+export clienttype = @CLIENT_TYPE@
+
 client: $(exedir)/birdc
 
 bird-dep := $(addsuffix /all.o, $(static-dirs)) conf/all.o lib/birdlib.a
